@@ -1,0 +1,24 @@
+{
+  "fuel": [
+    {
+      "id": 1,
+      "name": "Gasolina Comum",
+      "price": 8.44
+    },
+    {
+      "id": 2,
+      "name": "Gasolina Aditivada",
+      "price": 9
+    },
+    {
+      "id": 3,
+      "name": "Diesel",
+      "price": 6.80
+    },
+    {
+      "id": 4,
+      "name": "Etanol",
+      "price": 6
+    }
+  ]
+}
