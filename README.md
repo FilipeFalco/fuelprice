@@ -7,9 +7,9 @@ Projeto criado para fixação de aprendizagem do curso _React JD - Domindo o Fro
 
 - [x] Criar projeto e preparar json server
 - [x] Criar pastas e estrutura do projeto
-- [ ] Criar os componentes
+- [x] Criar os componentes
 - [ ] Importar fonts - Roboto e Digital
 - [ ] Configurar styled-components
-- [ ] Cria r Fuel Component
+- [ ] Criar Fuel Component
 - [ ] Conectar o componente na API
 - [ ] Criar etapa de alteração de preços
