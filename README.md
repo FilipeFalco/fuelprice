@@ -11,7 +11,9 @@ Projeto criado para fixação de aprendizagem do curso _React JD - Domindo o Fro
 - [x] Importar fonts - Roboto e Digital
 - [x] Alterar titulo do APP
 - [x] Alterar Ícone
-- [ ] Configurar styled-components
+- [x] Configurar tem e styled-components
+- [x] Adicionar pacote de icones
 - [ ] Criar Fuel Component
+- [ ] Configurar Axios
 - [ ] Conectar o componente na API
 - [ ] Criar etapa de alteração de preços
