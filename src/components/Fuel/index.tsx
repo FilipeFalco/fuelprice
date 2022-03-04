@@ -4,6 +4,7 @@ import { getFuel } from './services';
 import {
   Box,
   Container,
+  FuelInput,
   FuelPrice,
   FuelText,
   InfoText,
@@ -32,6 +33,17 @@ export const FuelComponent = ({
     fetchAndUpdateData();
   }, []);
 
+  function onUpdatePrice(fuelId: number, price: string) {
+    const updatedFuels = fuels?.map((fuel) => {
+      if (fuel.id === fuelId) {
+        fuel.price = Number(price);
+      }
+      return fuel;
+    });
+
+    setFuels(updatedFuels);
+  }
+
   return (
     <Container>
       <Title>Posto React JS</Title>
@@ -52,7 +64,15 @@ export const FuelComponent = ({
               <FuelText>{fuel.name}</FuelText>
             </Box>
             <Box>
-              <FuelPrice>{fuel.price}</FuelPrice>
+              {editMode ? (
+                <FuelInput
+                  type='number'
+                  value={fuel.price}
+                  onChange={(ev) => onUpdatePrice(fuel.id, ev.target.value)}
+                />
+              ) : (
+                <FuelPrice>{fuel.price}</FuelPrice>
+              )}
             </Box>
           </Row>
         ))}
