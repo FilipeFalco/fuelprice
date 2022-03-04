@@ -1,3 +1,9 @@
+import { Title } from './styles';
+
 export const FuelComponent = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Title>Posto React JS</Title>
+    </div>
+  );
 };
