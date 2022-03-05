@@ -3,12 +3,12 @@
     {
       "id": 1,
       "name": "Gasolina Comum",
-      "price": 8.44
+      "price": 6.44
     },
     {
       "id": 2,
       "name": "Gasolina Aditivada",
-      "price": 9
+      "price": 10
     },
     {
       "id": 3,

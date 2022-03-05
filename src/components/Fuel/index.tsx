@@ -17,6 +17,8 @@ import {
 } from './styles';
 import { FuelComponentProps, IFuel, IFuelState } from './types';
 
+const TIME_TO_UPDATE_MS = 1000;
+
 export const FuelComponent = ({
   editMode,
   toggleEditMode,
@@ -33,6 +35,18 @@ export const FuelComponent = ({
     fetchAndUpdateData();
   }, []);
 
+  useEffect(() => {
+    if (editMode) return;
+
+    const intervalId = setInterval(() => {
+      fetchAndUpdateData();
+    }, TIME_TO_UPDATE_MS);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [editMode]);
+
   function onUpdatePrice(fuelId: number, price: string) {
     const updatedFuels = fuels?.map((fuel) => {
       if (fuel.id === fuelId) {
@@ -48,7 +62,7 @@ export const FuelComponent = ({
   async function onSave() {
     const changed = fuels?.filter((f) => f.updated);
 
-    if (!changed) {
+    if (!changed || changed.length === 0) {
       toggleEditMode();
       return;
     }
