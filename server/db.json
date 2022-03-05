@@ -13,12 +13,12 @@
     {
       "id": 3,
       "name": "Diesel",
-      "price": 6.80
+      "price": 4.8
     },
     {
       "id": 4,
       "name": "Etanol",
-      "price": 6.70
+      "price": 6.7
     }
   ]
 }

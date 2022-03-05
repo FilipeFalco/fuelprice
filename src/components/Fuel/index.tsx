@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { FiEdit2 } from 'react-icons/fi';
-import { getFuel } from './services';
+import { getFuel, updateFuel } from './services';
 import {
   Box,
   Container,
@@ -15,13 +15,13 @@ import {
   SettingsIcons,
   Title,
 } from './styles';
-import { FuelComponentProps, IFuel } from './types';
+import { FuelComponentProps, IFuel, IFuelState } from './types';
 
 export const FuelComponent = ({
   editMode,
   toggleEditMode,
 }: FuelComponentProps) => {
-  const [fuels, setFuels] = useState<IFuel[]>();
+  const [fuels, setFuels] = useState<IFuelState[]>();
 
   async function fetchAndUpdateData() {
     const data = await getFuel();
@@ -37,11 +37,29 @@ export const FuelComponent = ({
     const updatedFuels = fuels?.map((fuel) => {
       if (fuel.id === fuelId) {
         fuel.price = Number(price);
+        fuel.updated = true;
       }
       return fuel;
     });
 
     setFuels(updatedFuels);
+  }
+
+  async function onSave() {
+    const changed = fuels?.filter((f) => f.updated);
+
+    if (!changed) {
+      toggleEditMode();
+      return;
+    }
+
+    for (const changedFuel of changed) {
+      const { updated, ...rest } = changedFuel;
+      await updateFuel(rest);
+    }
+
+    fetchAndUpdateData();
+    toggleEditMode();
   }
 
   return (
@@ -78,7 +96,7 @@ export const FuelComponent = ({
         ))}
         {editMode && (
           <Row>
-            <SaveButton>
+            <SaveButton onClick={onSave}>
               <SaveIcon />
               <span>Save</span>
             </SaveButton>
