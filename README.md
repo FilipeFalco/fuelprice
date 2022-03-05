@@ -13,7 +13,25 @@ Projeto criado para fixação de aprendizagem do curso _React JD - Domindo o Fro
 - [x] Alterar Ícone
 - [x] Configurar tem e styled-components
 - [x] Adicionar pacote de icones
-- [ ] Criar Fuel Component
-- [ ] Configurar Axios
-- [ ] Conectar o componente na API
-- [ ] Criar etapa de alteração de preços
+- [x] Criar Fuel Component
+- [x] Configurar Axios
+- [x] Conectar o componente na API
+- [x] Criar etapa de alteração de preços
+
+## O que foi aprendido
+
+- React
+- Components
+- Lifecicly
+- State
+- Arrays
+- Json Server
+- Axios
+- Conexões a API's
+- GET
+- PUT
+- Tenas com o Styled-Components
+- Como estilizar elementos
+- Como estilizar ícones
+- Como ter switch mode (edit mode)
+- Input controlados
