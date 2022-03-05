@@ -7,9 +7,31 @@ Projeto criado para fixação de aprendizagem do curso _React JD - Domindo o Fro
 
 - [x] Criar projeto e preparar json server
 - [x] Criar pastas e estrutura do projeto
-- [ ] Criar os componentes
-- [ ] Importar fonts - Roboto e Digital
-- [ ] Configurar styled-components
-- [ ] Cria r Fuel Component
-- [ ] Conectar o componente na API
-- [ ] Criar etapa de alteração de preços
+- [x] Criar os componentes
+- [x] Importar fonts - Roboto e Digital
+- [x] Alterar titulo do APP
+- [x] Alterar Ícone
+- [x] Configurar tem e styled-components
+- [x] Adicionar pacote de icones
+- [x] Criar Fuel Component
+- [x] Configurar Axios
+- [x] Conectar o componente na API
+- [x] Criar etapa de alteração de preços
+
+## O que foi aprendido
+
+- React
+- Components
+- Lifecicly
+- State
+- Arrays
+- Json Server
+- Axios
+- Conexões a API's
+- GET
+- PUT
+- Tenas com o Styled-Components
+- Como estilizar elementos
+- Como estilizar ícones
+- Como ter switch mode (edit mode)
+- Input controlados
